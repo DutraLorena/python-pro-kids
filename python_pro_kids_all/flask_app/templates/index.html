@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Infantil Flask</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f9fc; text-align: center; padding: 40px; }
+        .box { max-width: 500px; margin: auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        input, button { padding: 10px; font-size: 16px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Quiz Infantil</h1>
+        <p><strong>Pontos:</strong> {{ score }}</p>
+        <p>{{ question }}</p>
+        <form method="post">
+            <input type="text" name="answer" placeholder="Digite sua resposta" required>
+            <br>
+            <button type="submit">Responder</button>
+        </form>
+        <p>{{ feedback }}</p>
+    </div>
+</body>
+</html>
